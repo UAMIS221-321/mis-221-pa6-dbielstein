@@ -5,7 +5,6 @@ var bookList = [];
 var myBook = {};
 
 function populateList(){
-
     const allBooksApiUrl = baseUrl;
     fetch(allBooksApiUrl).then(function(response){
         return response.json();
@@ -85,7 +84,7 @@ function deleteBook(){
         }
     })
     .then((response)=>{
-        blankFields();
         populateList();
+        blankFields();
     });
 }
